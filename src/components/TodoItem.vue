@@ -16,7 +16,7 @@
     .todo-item > button { width: 20px; height: 20px; position: absolute; top: 50%; transform: translateY(-50%); border: 0; cursor: pointer; background-color: transparent;}
     .todo-item > button svg { position: relative; left: -100%; }
     .todo-item > button.ckeck { left: 1rem; opacity: 0; }
-    .todo-item > button.edit { left: calc(90% - 20px); }
+    .todo-item > button.edit { right: 60px; }
     .todo-item > button.edit:hover svg path { fill: #4d61f5; }
     .todo-item > button.remove { left: calc(100% - 45px); }
     .todo-item > button.remove:hover svg path { fill: red; }
