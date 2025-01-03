@@ -36,7 +36,6 @@ const store = createStore({
         },
 
         finishEditTodo(state, {id, newText}) {
-            console.log(state.todos)
             const todo = state.todos.find(todo => todo.id === id)
             todo.todoText = newText
             todo.isEditing = false
@@ -61,6 +60,18 @@ const store = createStore({
         removeTodo({ commit }, id) { commit('removeTodo', id) },
 
         toggleTodo({ commit }, id) { commit('toggleTodo', id) }
+    },
+
+    getters: {
+        todos(state) {
+            return state.todos;
+        },
+        completedTodos(state) {
+            return state.todos.filter(todo => todo.isCompleted);
+        },
+        activeTodos(state) {
+            return state.todos.filter(todo => !todo.isCompleted);
+        }
     }
     
 });

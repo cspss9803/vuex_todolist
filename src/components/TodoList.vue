@@ -18,6 +18,6 @@
 import { useStore } from 'vuex'
 import { computed } from 'vue'
 const store = useStore()
-const todos = computed(() => store.state.todos).value
+const todos = computed(() => store.getters.todos)
 
 </script>
